@@ -13,7 +13,7 @@ For much more intense page about TensorflowJS see this link   https://hpssjellis
 
 
 <ul>
-   <li><a href="a-posenet.html">a-posenet.html</a>A single file application (SPA) of the impressive webcam posenet</li>
+   <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/a-posenet.html">a-posenet.html</a>A single file application (SPA) of the impressive webcam posenet</li>
    <li><a href=""></a></li>
    <li><a href=""></a></li>
    <li><a href=""></a></li>
