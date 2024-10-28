@@ -19,7 +19,7 @@ For much more intense page about TensorflowJS see this link   https://hpssjellis
    <li><a href=""></a></li>
    <li><a href=""></a></li>
    <li><a href=""></a></li>
-   <li><a href=""></a></li>
+   <li><a href="e-tinyMLjs">e-TinyMLjs</a>An example of training a machine learning model using either your cell phone accelrometer or desktop mouse motion in an application</li>
 
 
 </ul>
