@@ -50,7 +50,7 @@
 <div style="font-size:15px; background-color:lightyellow; width:88%;  border:5px solid blue; padding:5px; margin:5px;"> 
 One of the easiest Keras Layers is xOR. It has 4 fixed inputs 2 digit and 4 fixed one digit outputs.<br><br>
 This is a very simple xOr Neural Network using Tensorflowjs Layers<br>
-Your job is to try to understand the TensorflowJS Keras coding in the black box, make it faster to train and better results. Good luck.<br> 
+Your job is to try to understand the TensorflowJS Keras coding in the black box, first make the results better, then make the results better and faster. Good luck.<br> 
  The Original by Matt Cameron was written for NodeJS, his code is at <a href="https://github.com/mattcam/tfjs_xor_example">Code</a><br>
 The expected output for xOr input is<br>
 [0,0] = ~ 0<br>
@@ -71,7 +71,7 @@ Note: The code in the black box can be pasted into a web server as a fully funct
 <input id="myButton123" type="button" value="xOr using Keras Layers" onclick="{
                                                                                      
   (async function myGo() {
-    let myEpochs = 3000;
+    let myEpochs = 1000;   // number of epochs for training
     document.getElementById('myButton123').style.backgroundColor = 'red'  
     const model = tf.sequential();
 
