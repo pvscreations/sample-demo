@@ -17,9 +17,7 @@ For much more intense page about TensorflowJS see this link   https://hpssjellis
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/b-xor.html"> b-xor.html</a> An excellent chance for beginners to optimize a Keras model online. Make it faster and more accurate</li>
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/c-handpose.html"> c-handpose.html</a> Another cool example, this time using the hand.</li>
    <li><a href=""></a></li>
-   <li><a href=""></a></li>
-   <li><a href=""></a></li>
-   <li><a href="e-tinyMLjs">e-TinyMLjs</a>An example of training a machine learning model using either your cell phone accelrometer or desktop mouse motion in an application</li>
+   <li><a href="e-tinyMLjs.html"> e-TinyMLjs.html </a>An example of training a machine learning model using either your cell phone accelrometer or your desktop mouse motion in an SPA</li>
 
 
 </ul>
