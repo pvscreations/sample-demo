@@ -27,4 +27,4 @@ https://hpssjellis.github.io/my-examples-of-webAI/ or use the QR code
 
 
 
-For much more intense page made by Jeremy Ellis around 2018-2019 about TensorflowJS is at this link   https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/
+For a much more intense page made by Jeremy Ellis around 2018-2019 about TensorflowJS is at this link   https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/
