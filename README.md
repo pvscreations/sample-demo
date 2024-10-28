@@ -2,14 +2,7 @@
 WebAI as SPA's (single page applications) which are great to feed into LLM's like ChatGPT.
 
 
-
-
-
-
-For much more intense page about TensorflowJS see this link   https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/
-
-
-
+The github for this page is at    https://github.com/hpssjellis/my-examples-of-webAI
 
 
 <ul>
@@ -26,4 +19,12 @@ For much more intense page about TensorflowJS see this link   https://hpssjellis
 
 If you want to view this page as a webpage click this link
 
-https://hpssjellis.github.io/my-examples-of-webAI/
+https://hpssjellis.github.io/my-examples-of-webAI/ or use the QR code
+
+![image](https://github.com/user-attachments/assets/51130e54-6215-4273-acf3-38cfeef35f52)
+
+
+
+
+
+For much more intense page made by Jeremy Ellis around 2018-2019 about TensorflowJS is at this link   https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/
