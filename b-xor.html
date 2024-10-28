@@ -58,7 +58,7 @@ The expected output for xOr input is<br>
 [0,1] = ~ 1<br>
 [1,1] = ~ 0<br>
  
- 
+Your job is to try to understand the TensorflowJS Keras coding in the black box, make it faster to train and better results. Good luck.  
  
  
  
@@ -71,10 +71,11 @@ The expected output for xOr input is<br>
 <input id="myButton123" type="button" value="xOr using Keras Layers" onclick="{
                                                                                      
   (async function myGo() {
+    let myEpochs = 3000;
     document.getElementById('myButton123').style.backgroundColor = 'red'  
     const model = tf.sequential();
 
-    model.add(tf.layers.dense({inputShape: [2],  units: 10, activation: 'sigmoid',}) );  // 2 inputs to 10 hidden layer nodes
+    model.add(tf.layers.dense({inputShape: [2],  units: 10, activation: 'relu',}) );  // 2 inputs to 10 hidden layer nodes
     model.add(tf.layers.dense({inputShape: [10], units: 1,  activation: 'sigmoid',}) );  // from the 10 hidden layer nodes to 1 output layer                                                                                  
     const myOptimizer = tf.train.sgd(0.5); 
                                                                                                
@@ -85,10 +86,11 @@ The expected output for xOr input is<br>
                                                                                  
     var myFit = await model.fit(xTrainingData, yTrainingTarget, {
         batchSize : 4,
-        epochs    : 3000,                                                                      
+        epochs    : myEpochs,                                                                      
         callbacks:  { 
           onEpochEnd: async (epoch, logs) => {                                                                                         
-            document.getElementById('myDiv123').innerHTML = 'Epoch # ' + (epoch+1) + '/3000, Loss: ' + logs.loss + '<br><br>'
+           // document.getElementById('myDiv123').innerHTML = 'Epoch # ' + (epoch+1) + '/'+ myEpochs +', Loss: ' + logs.loss + '<br><br>'
+            document.getElementById('myDiv123').innerHTML = `Epoch # ${epoch+1} / ${myEpochs}, Loss: ${logs.loss} <br><br>`
             await tf.nextFrame();  // This improves UI responsiveness during training.  
           }    // end onEpochEnd callback 
         }      // end all callbacks                                                              
@@ -191,7 +193,7 @@ function myTextGrow(myT, myB){
    var myCursorEnd = document.getElementById(myT).selectionEnd
 
    myDivName = myB.replace('Code','')
-   document.getElementById(myT).value = '\x3Cscript src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.3.0"> \x3C/script> \n\n' + document.getElementById(myB).innerHTML 
+   document.getElementById(myT).value = '\x3Cscript src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0"> \x3C/script> \n\n' + document.getElementById(myB).innerHTML 
    document.getElementById(myT).value += '<div id=\''+myDivName+'\'>...</div><br>'     
    setTimeout(function() {
       while (  document.getElementById(myT).clientHeight < document.getElementById(myT).scrollHeight){                                                                                                                                              
