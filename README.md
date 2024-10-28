@@ -22,3 +22,9 @@ For much more intense page about TensorflowJS see this link   https://hpssjellis
 
 
 </ul>
+
+
+
+If you want to view this page as a webpage click this link
+
+https://hpssjellis.github.io/my-examples-of-webAI/
