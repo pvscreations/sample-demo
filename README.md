@@ -10,8 +10,8 @@ The github for this page is at    <a href="https://github.com/hpssjellis/my-exam
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/b-xor.html"> b-xor.html</a> An excellent chance for beginners to optimize a Keras model online. Make it faster and more accurate</li>
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/c-handpose.html"> c-handpose.html</a> Another cool example, this time using the hand.</li>
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/d-knn-classify.html"> d-knn-classify.html</a> A cool live train and run vision model for 3 labels. Best to use your face, look left, open mouth etc. If you don't like the results just train it more times.</li>
-   <li><a href="e-tinyMLjs.html"> e-TinyMLjs.html </a>An example of training a machine learning model using either your cell phone accelerometer or your desktop mouse motion in an SPA</li>
-   <li><a href="f-sounds.html"> f-sounds.html </a>Fairly raw sounds. Train "Right", "Left" and background no sounds.</li>
+   <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/e-tinyMLjs.html"> e-TinyMLjs.html </a>An example of training a machine learning model using either your cell phone accelerometer or your desktop mouse motion in an SPA</li>
+   <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/f-sounds.html"> f-sounds.html </a>Fairly raw sounds. Train "Right", "Left" and background no sounds.</li>
 
 </ul>
 
