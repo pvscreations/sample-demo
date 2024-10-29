@@ -122,6 +122,19 @@
 //import * as posenet from '@tensorflow-models/posenet';
 //import * as tf from '@tensorflow/tfjs';
 
+            // Ensure TensorFlow is ready before using it
+        tf.ready().then(() => {
+            // Your existing code that uses TensorFlow
+            console.log('TensorFlow is ready');
+            // Example: Load the PoseNet model
+            posenet.load().then(net => {
+                console.log('PoseNet model loaded');
+                // Your code to use the PoseNet model
+            });
+        }).catch(err => {
+            console.error('Error loading TensorFlow:', err);
+        });
+
 const color = 'aqua';
 const boundingBoxColor = 'red';
 const lineWidth = 2;
@@ -634,7 +647,7 @@ function detectPoseInRealTime(video, net) {
   canvas.height = videoHeight;
 
   async function poseDetectionFrame() {
-      await  posenet.ready()
+    //  await  posenet.ready()
     if (guiState.changeToArchitecture) {
       // Important to purge variables and free up GPU memory
       guiState.net.dispose();
