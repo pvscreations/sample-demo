@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 
@@ -106,7 +107,7 @@
 
  
     <!-- Adds the WASM backend to the global backend registry -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.0.0/dist/tf-backend-wasm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@4.22.0/dist/tf-backend-wasm.js"></script>
 
 
   <!-- The following 2 js files are included here to simplify the process for beginners  -->
@@ -121,6 +122,19 @@
 //////////////////////////////////////// Demo_utils.js start //////////////////////////////////////////////////
 //import * as posenet from '@tensorflow-models/posenet';
 //import * as tf from '@tensorflow/tfjs';
+
+            // Ensure TensorFlow is ready before using it
+        tf.ready().then(() => {
+            // Your existing code that uses TensorFlow
+            console.log('TensorFlow is ready');
+            // Example: Load the PoseNet model
+            posenet.load().then(net => {
+                console.log('PoseNet model loaded');
+                // Your code to use the PoseNet model
+            });
+        }).catch(err => {
+            console.error('Error loading TensorFlow:', err);
+        });
 
 const color = 'aqua';
 const boundingBoxColor = 'red';
@@ -166,6 +180,9 @@ function updateTryResNetButtonDatGuiCss() {
  * Toggles between the loading UI and the main canvas UI.
  */
 function toggleLoadingUI(
+
+
+    
     showLoadingUI, loadingDivId = 'loading', mainDivId = 'main') {
   if (showLoadingUI) {
     document.getElementById(loadingDivId).style.display = 'block';
@@ -174,6 +191,8 @@ function toggleLoadingUI(
     document.getElementById(loadingDivId).style.display = 'none';
     document.getElementById(mainDivId).style.display = 'block';
   }
+
+
 }
 
 function toTuple({y, x}) {
@@ -629,6 +648,7 @@ function detectPoseInRealTime(video, net) {
   canvas.height = videoHeight;
 
   async function poseDetectionFrame() {
+    //  await  posenet.ready()
     if (guiState.changeToArchitecture) {
       // Important to purge variables and free up GPU memory
       guiState.net.dispose();
