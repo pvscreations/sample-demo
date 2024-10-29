@@ -18,6 +18,7 @@
 
 <br/><br/>
 <button id="train" onclick="train()">Train</button>
+Epochs: <input id="myENum" type=number value=10 >
 <div id="console"></div>
 
 <br/><br/>
@@ -84,6 +85,7 @@ const INPUT_SHAPE = [NUM_FRAMES, 232, 1];
 let model;
 
 async function train() {
+  const myEpochs = parseInt(document.getElementById('myENum').value)
  toggleButtons(false);
  const ys = tf.oneHot(examples.map(e => e.label), 3);
  const xsShape = [examples.length, ...INPUT_SHAPE];
@@ -91,7 +93,7 @@ async function train() {
 
  await model.fit(xs, ys, {
    batchSize: 16,
-   epochs: 10,
+   epochs: myEpochs,
    callbacks: {
      onEpochEnd: (epoch, logs) => {
        document.querySelector('#console').textContent =
@@ -136,10 +138,21 @@ function flatten(tensors) {
 
 async function moveSlider(labelTensor) {
  const label = (await labelTensor.data())[0];
+  if (label == 0) {
+    document.getElementById('console').textContent = 'Left';
+  }
+  if (label == 1) {
+    document.getElementById('console').textContent = 'Right';
+  }
+  if (label == 2) {
+    document.getElementById('console').textContent = 'Noise';
+  }
+    /*
  document.getElementById('console').textContent = label;
  if (label == 2) {
    return;
  }
+  */
  let delta = 0.1;
  const prevValue = +document.getElementById('output').value;
  document.getElementById('output').value =
