@@ -11,9 +11,9 @@
   </head>
   <body>
 
-<button id="left" onmousedown="collect(0, this)" onmouseup="collect(null, this)">Record the word 'Left'</button>
-<button id="right" onmousedown="collect(1, this)" onmouseup="collect(null, this)">Record the word 'Right'</button>
-<button id="noise" onmousedown="collect(2, this)" onmouseup="collect(null, this)">Record the background Noise</button>
+<button id="left" onmousedown="collect(0, this)" ">Record the word 'Left' while holding button down</button>
+<button id="right" onmousedown="collect(1, this)" ">Record the word 'Right' while holding button down</button>
+<button id="noise" onmousedown="collect(2, this)" ">Record the background Noise while holding button down</button>
 
 
 <br/><br/>
@@ -48,13 +48,13 @@ let examples = [];
 
 function collect(label, myButton) {
  myButton.style.backgroundColor='green';
- if (recognizer.isListening()) {
-   return recognizer.stopListening();
+ if (recognizer.isListening()) { 
    myButton.style.backgroundColor='lightGray';
+   return recognizer.stopListening();
  }
- if (label == null) {
+/* if (label == null) {
    return;
- }
+ }*/
  recognizer.listen(async ({spectrogram: {frameSize, data}}) => {
    let vals = normalize(data.subarray(-frameSize * NUM_FRAMES));
    examples.push({vals, label});
