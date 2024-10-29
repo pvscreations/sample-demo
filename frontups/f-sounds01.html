@@ -11,7 +11,7 @@
   </head>
   <body>
 
-<button id="left" onmousedown="collect(0); this.style.backgroundColor='green';" onmouseup="collect(null);this.style.backgroundColor='lightgray';">Record the word 'Left'</button>
+<button id="left" onmousedown="collect(0); this.style.backgroundColor='green';" onmouseup="collect(null);">Record the word 'Left'</button>
 <button id="right" onmousedown="collect(1)" onmouseup="collect(null)">Record the word 'Right'</button>
 <button id="noise" onmousedown="collect(2)" onmouseup="collect(null)">Record the background Noise</button>
 
@@ -56,8 +56,7 @@ function collect(label) {
  recognizer.listen(async ({spectrogram: {frameSize, data}}) => {
    let vals = normalize(data.subarray(-frameSize * NUM_FRAMES));
    examples.push({vals, label});
-   document.querySelector('#console').textContent =
-       `${examples.length} examples collected`;
+   document.querySelector('#console').textContent =`${examples.length} examples collected`;
  }, {
    overlapFactor: 0.999,
    includeSpectrogram: true,
