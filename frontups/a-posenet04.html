@@ -167,7 +167,7 @@ function updateTryResNetButtonDatGuiCss() {
  */
 function toggleLoadingUI(
 
-   await if ( tf.ready() ){
+   await  tf.ready() 
     
     showLoadingUI, loadingDivId = 'loading', mainDivId = 'main') {
   if (showLoadingUI) {
@@ -178,7 +178,7 @@ function toggleLoadingUI(
     document.getElementById(mainDivId).style.display = 'block';
   }
 
-}
+
 }
 
 function toTuple({y, x}) {
