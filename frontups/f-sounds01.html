@@ -11,9 +11,9 @@
   </head>
   <body>
 
-<button id="left" onmousedown="collect(0); this.style.backgroundColor='green';" onmouseup="collect(null);">Record the word 'Left'</button>
-<button id="right" onmousedown="collect(1)" onmouseup="collect(null)">Record the word 'Right'</button>
-<button id="noise" onmousedown="collect(2)" onmouseup="collect(null)">Record the background Noise</button>
+<button id="left" onmousedown="collect(0, this)" onmouseup="collect(null, this)">Record the word 'Left'</button>
+<button id="right" onmousedown="collect(1, this)" onmouseup="collect(null, this)">Record the word 'Right'</button>
+<button id="noise" onmousedown="collect(2, this)" onmouseup="collect(null, this)">Record the background Noise</button>
 
 
 <br/><br/>
@@ -46,9 +46,11 @@ function predictWord() {
 const NUM_FRAMES = 3;
 let examples = [];
 
-function collect(label) {
+function collect(label, myButton) {
+ myButton.style.backgroundColor='green';
  if (recognizer.isListening()) {
    return recognizer.stopListening();
+   myButton.style.backgroundColor='lightGray';
  }
  if (label == null) {
    return;
