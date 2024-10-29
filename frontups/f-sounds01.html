@@ -11,9 +11,9 @@
   </head>
   <body>
 
-<button id="left" onmousedown="collect(0, this)" ">Record the word 'Left' while holding button down</button>
-<button id="right" onmousedown="collect(1, this)" ">Record the word 'Right' while holding button down</button>
-<button id="noise" onmousedown="collect(2, this)" ">Record the background Noise while holding button down</button>
+<button id="left" onmousedown="collect(0, this)" ">Record the word 'Left' </button>
+<button id="right" onmousedown="collect(1, this)" ">Record the word 'Right' </button>
+<button id="noise" onmousedown="collect(2, this)" ">Record the background Noise </button>
 
 
 <br/><br/>
@@ -47,9 +47,11 @@ const NUM_FRAMES = 3;
 let examples = [];
 
 function collect(label, myButton) {
- myButton.style.backgroundColor='green';
+ myButton.style.backgroundColor = 'green';
+ myButton.value = 'stop';
  if (recognizer.isListening()) { 
    myButton.style.backgroundColor='lightGray';
+   myButton.value = 'Done';
    return recognizer.stopListening();
  }
 /* if (label == null) {
