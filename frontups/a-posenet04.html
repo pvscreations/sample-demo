@@ -166,6 +166,9 @@ function updateTryResNetButtonDatGuiCss() {
  * Toggles between the loading UI and the main canvas UI.
  */
 function toggleLoadingUI(
+
+   await if ( tf.ready() ){
+    
     showLoadingUI, loadingDivId = 'loading', mainDivId = 'main') {
   if (showLoadingUI) {
     document.getElementById(loadingDivId).style.display = 'block';
@@ -174,6 +177,8 @@ function toggleLoadingUI(
     document.getElementById(loadingDivId).style.display = 'none';
     document.getElementById(mainDivId).style.display = 'block';
   }
+
+}
 }
 
 function toTuple({y, x}) {
