@@ -55,6 +55,11 @@
 </head>
 <body>
 <h1 align=center>TinyMLjs </h1>
+This is a short version of myProof of Concept to train microcontroller sensors on the web instead of in the cloud or using 
+   complex installed software. On a cell phone you can train using the accelerometers. On your desktop computer train mouse movement<br>
+
+<details closed> <summary>For Microcontrollers</summary>
+   
 <h3>Making TinyML truly client-side. Giving Makers full control of the process, user friendly, private and protected</h3>   
 <h6> Version 0.56.3-215 Note: WebSerial microcontroller connection works on Chrome or Edge for Mac, Android (Pixel Phones early verson) or Windows, only works on Edge for Linux</h6>
 
@@ -79,6 +84,9 @@ Presently, for complex vision or sound data it is easier to use <a href="https:/
 <input type=button value="send 'a' LED On or Off" onclick="{mySendIt('a')}">
 <input type=button value="send 'b' LED Off or On" onclick="{mySendIt('b')}"><br>
 
+</details>
+
+   
 <input type=button value="Clear and send 'start' "  style="Background-color:lime; width:200px;"  onclick="{
     document.getElementById('myArea01').value = '' 
     if (mySendFirstLine) { mySendIt('firstline'); }
@@ -501,6 +509,10 @@ function myTextGrow(myT, myB){
 <div id="myShowModelDiv" >...</div>  <br>
 
 <input type="button" value="Export Model" onclick="exportModel()"> <input id="myExportFileName" type=text value="model"> <br>
+
+<details closed> <summary>For Microcontrollers</summary>
+
+   
 <ol> Try the following steps:
 <li>Convert the exported model to Arduino ready c-header model.h file as well as a model.tflite file using one of the following methods:<br></li>
 <li><table border=1>
@@ -511,7 +523,12 @@ function myTextGrow(myT, myB){
 </table> <br><br></li>
 
 <li>Use <a href="https://netron.app/">https://netron.app/</a> </td></td> Use the online netron.app to check and visualize your downloaded model.tflite <br> </li>
-<li>Once you have made a model.h file then install this Arduino Library <a href="https://github.com/hpssjellis/RocksettaTinyML">RocksettaTinyML</a> based on EloquentArduino  to load the code onto your Arduino IDE.  <br></li>
+<li>Once you have made a model.h file then install this Arduino Library <a href="https://github.com/hpssjellis/RocksettaTinyML">RocksettaTinyML</a> based on EloquentArduino  to load the code onto your Arduino IDE.
+   
+   <br></li>
+
+
+   
 
  
 <span id="mySpanExport">...</span>
@@ -519,7 +536,9 @@ function myTextGrow(myT, myB){
 
 
 
+</ol>
 
+</details>
 
    
 <input  type=button value="Show File Uploading" style="background-color:red;" onclick="{
@@ -1609,8 +1628,7 @@ if (myCellPhoneOnce){
 
 
 
-
-   
+<details closed> <summary>Teacher Tips</summary>
 
 <br><br>
 Aruino NiclaVision webSerial code that can be adapted for other microcontrollers<br> 
@@ -1750,6 +1768,9 @@ This page should be at <a href="https://hpssjellis.github.io/tinyMLjs/public/acc
 <br>   <li> Android and Apple device have an opposite orientation, so I have made negative all the android motion data so when your phone is on a table z = -9.8 m/s^2 etc. When looking veritacally at your phone y = -9.8 m/s^2. The auto detect of this only works if an Android phone is in mobile format not "desktop site" 
 <br>   <li> Real data has lots of rough data, machine learning models do not like missing data. If your results show "NaN" either your training data or classification data has errors. Note: If the loss is not changing your trained data probably has errors. The "clean,trim,fill" buttons might help.
 <br>  <li> Presently a CSV label upload bug happens sometimes. Easy to fix by entering the correct labels in the correct order. I will try to fix the issue when I figure out what is causing it.
-</ol>   
+</ol>  
+
+</details>
+   
 </body>
 </html>
