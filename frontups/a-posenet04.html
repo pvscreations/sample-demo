@@ -167,7 +167,7 @@ function updateTryResNetButtonDatGuiCss() {
  */
 function toggleLoadingUI(
 
-   await  posenet.ready() 
+
     
     showLoadingUI, loadingDivId = 'loading', mainDivId = 'main') {
   if (showLoadingUI) {
@@ -634,6 +634,7 @@ function detectPoseInRealTime(video, net) {
   canvas.height = videoHeight;
 
   async function poseDetectionFrame() {
+      await  posenet.load.ready()
     if (guiState.changeToArchitecture) {
       // Important to purge variables and free up GPU memory
       guiState.net.dispose();
