@@ -93,7 +93,11 @@ Presently, for complex vision or sound data it is easier to use <a href="https:/
     setTimeout(function() { mySendIt('start'); }, 300);  // short delay to send the first line
     setTimeout(function() { myShowGraph() }, 2500);      // give the data a few seconds to load before drawing chart                                           
 }">
-    
+
+
+<details closed> <summary>For microcontrollers</summary>
+
+   
 <input type=button value="send 'stop' " title="Normal Acceleration Demo" onclick="{mySendIt('stop')}">  
    <input type=button value="Clear" onclick="{
     document.getElementById('myArea01').value = ''                                                                                            
@@ -126,6 +130,8 @@ Presently, for complex vision or sound data it is easier to use <a href="https:/
     setTimeout(function() { mySendIt('fancy2'); }, 300);  // short delay to send the first line before activating the sensor
     setTimeout(function() { myShowGraph() }, 2500);      // give the data a few seconds to load before drawing chart   
 }">   
+
+</details>
    <!--
 <input type=button value="Nicla-Proximity" title="18 sensor fusion example" onclick="{ 
     document.getElementById('myArea01').value = '' 
