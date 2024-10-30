@@ -12,9 +12,9 @@
   <body>
 
 <button id="left" onmousedown="collect(0, this)">Record multiple times the word: </button>
-<input id="myLeftIn" type=text value="Left" onChange="alert()"> <br>
+<input id="myLeftIn" type=text value="Left"  onChange="document.getElementById('mySpanLeft').value = this.value"> <br>
 <button id="right" onmousedown="collect(1, this)">Record multiple times the word: </button>
-<input id="myRightIn" type=text value="Right" onChange="document.getElementById(mySpanRight).value = this.value"> <br>
+<input id="myRightIn" type=text value="Right" onChange="document.getElementById('mySpanRight').value = this.value"> <br>
 <button id="noise" onmousedown="collect(2, this)" >Record the background Noise </button>
 <input id="myNoiseIn" type=text value="Noise"> <br>
 
