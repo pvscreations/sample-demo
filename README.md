@@ -17,6 +17,8 @@ The github for this page is at    <a href="https://github.com/hpssjellis/my-exam
 
 
    <li> Now try this prompt in your favorite LLM such as chatGPT. If it doesn't work check out the following code from chatGPT <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilenet-chatgpt.html">z-mobilenet-chatgpt.html</a> or from copilot. they are very simlar <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilenet-copilot.html">z-mobilenet-copilot.html</a> <br>
+</li>
+</ol>
       
 |--------|  
 |Write a single file html application that uses tensorflowjs to load a mobilenet vision model and activates the webcam every 1000 ms to classify the image.|    
