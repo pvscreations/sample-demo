@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam Image Classification</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            width: 320px;
+            height: 240px;
+            border: 2px solid black;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Classification</h1>
+    <video id="webcam" autoplay></video><br>
+    <button onclick="switchCamera('user')">Front Camera</button>
+    <button onclick="switchCamera('environment')">Rear Camera</button>
+    <div id="output"></div>
+
+    <script>
+        let net;
+        let currentStream;
+        const webcamElement = document.getElementById('webcam');
+        const outputElement = document.getElementById('output');
+
+        async function loadModel() {
+            net = await mobilenet.load();
+        }
+
+        async function switchCamera(facingMode) {
+            if (currentStream) {
+                currentStream.getTracks().forEach(track => track.stop());
+            }
+
+            const constraints = {
+                video: {
+                    facingMode: facingMode
+                }
+            };
+
+            currentStream = await navigator.mediaDevices.getUserMedia(constraints);
+            webcamElement.srcObject = currentStream;
+        }
+
+        async function classifyImage() {
+            const result = await net.classify(webcamElement);
+            outputElement.innerText = result.map(({ className, probability }) => 
+                `${className}: ${(probability * 100).toFixed(2)}%`).join('\n');
+        }
+
+        loadModel().then(() => {
+            switchCamera('user');
+            setInterval(classifyImage, 1000);
+        });
+    </script>
+</body>
+</html>
