@@ -16,7 +16,7 @@ The github for this page is at    <a href="https://github.com/hpssjellis/my-exam
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/f-sounds.html"> f-sounds.html </a>Fairly raw sounds. Train "Right", "Left" and background no sounds.</li>
 
 
-   <li> Now try this prompt in your favorite LLM such as chatGPT. If it doesn't work check out the following code from chatGPT <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilnet-chatgpt01.html">z-mobilnet-chatgpt01.html</a> or from copilot. they are very simlar <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilnet-copilot.html">z-mobilnet-copilot.html</a> <br>
+   <li> Now try this prompt in your favorite LLM such as chatGPT. If it doesn't work check out the following code from chatGPT <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilenet-chatgpt.html">z-mobilenet-chatgpt.html</a> or from copilot. they are very simlar <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilnet-copilot.html">z-mobilnet-copilot.html</a> <br>
       
 ```
 Write a single file html application that uses tensorflowjs to load a mobilenet vision model and activates the webcam every 1000 ms to classify the image.
