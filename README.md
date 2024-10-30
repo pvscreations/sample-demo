@@ -1,7 +1,7 @@
 # my-examples-of-webAI
-WebAI as SPA's (single page applications) which are great to feed into LLM's like ChatGPT.
+WebAI as SPA's (single page applications) which are great to feed into LLM's like ChatGPT to make changes add CSS styling or check for security issues.
 
-By <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis LinkedIn</a> use at your own risk. Downloads ML Models which may have data charges depending on your cell plan.
+By <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis LinkedIn</a> use at your own risk. Downloads ML Models which may encure data charges depending on your cell plan.
 
 
 The github for this page is at    <a href="https://github.com/hpssjellis/my-examples-of-webAI">github.com/hpssjellis/my-examples-of-webAI</a>
