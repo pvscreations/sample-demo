@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MobileNet Webcam Classification</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; font-family: Arial, sans-serif;">
+
+    <h1 style="text-align: center;">MobileNet Webcam Classifier</h1>
+    
+    <video id="myVideo" width="320" height="240" autoplay style="border: 1px solid black; margin-bottom: 10px;"></video>
+    <p id="myResult" style="font-size: 1.2em; font-weight: bold;"></p>
+
+    <input type="button" value="Front Camera" onclick="startCamera('user')" style="margin: 5px;">
+    <input type="button" value="Rear Camera" onclick="startCamera('environment')" style="margin: 5px;">
+    
+    <script>
+        let myVideoStream;
+        let myModel;
+        
+        async function loadModel() {
+            myModel = await mobilenet.load();
+            classifyImage();
+        }
+
+        async function startCamera(myFacingMode) {
+            if (myVideoStream) {
+                myVideoStream.getTracks().forEach(track => track.stop());
+            }
+            
+            myVideoStream = await navigator.mediaDevices.getUserMedia({
+                video: { width: 320, height: 240, facingMode: myFacingMode }
+            });
+            document.getElementById('myVideo').srcObject = myVideoStream;
+        }
+
+        async function classifyImage() {
+            const myVideo = document.getElementById('myVideo');
+            if (myModel && myVideo.readyState === 4) {
+                const myPrediction = await myModel.classify(myVideo);
+                document.getElementById('myResult').innerText = 
+                    `Prediction: ${myPrediction[0].className} (Confidence: ${(myPrediction[0].probability * 100).toFixed(2)}%)`;
+            }
+            setTimeout(classifyImage, 1000);
+        }
+
+        loadModel();
+    </script>
+</body>
+</html>
