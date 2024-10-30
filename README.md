@@ -16,7 +16,7 @@ The github for this page is at    <a href="https://github.com/hpssjellis/my-exam
    <li><a href="https://hpssjellis.github.io/my-examples-of-webAI/f-sounds.html"> f-sounds.html </a>Fairly raw sounds. Train "Right", "Left" and background no sounds.</li>
 
 
-   <li> Now try this prompt in your favorite LLM such as chatGPT. If it doesn't work checkout the code at <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilnet-chatgpt01.html">z-mobilnet-chatgpt01.html</a> <br><textarea rows=6 cols=70 >Write a single file html application that uses tensorflowjs to load a mobilenet vision model and activates the webcam every 1000 ms to classify the image. Give the option for the rear or front camera. This code should be as simple as possible using standard javascript async and await, no jQuery use getElementById and also no EventListeners just normal buttons with onClick. Any CSS should be minimal and used in tags with inline style. Can you do that?</textarea><br>
+   <li> Now try this prompt in your favorite LLM such as chatGPT. If it doesn't work checkout the code at <a href="https://hpssjellis.github.io/my-examples-of-webAI/z-mobilnet-chatgpt01.html">z-mobilnet-chatgpt01.html</a> <br>```Write a single file html application that uses tensorflowjs to load a mobilenet vision model and activates the webcam every 1000 ms to classify the image. Give the option for the rear or front camera. This code should be as simple as possible using standard javascript async and await, no jQuery use getElementById and also no EventListeners just normal buttons with onClick. Any CSS should be minimal and used in tags with inline style. Can you do that?```<br>
    
    </li>
 
