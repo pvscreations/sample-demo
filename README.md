@@ -31,7 +31,11 @@ The github for this page is at    <a href="https://github.com/hpssjellis/my-exam
 
 </ol>
 
-
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
 
 If you want to view this page as a webpage click this link
 
